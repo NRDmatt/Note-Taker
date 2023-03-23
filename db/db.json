@@ -1,0 +1,12 @@
+{
+  "notes": [
+    {
+      "title": "Example Note 1",
+      "text": "This is an example note."
+    },
+    {
+      "title": "Example Note 2",
+      "text": "This is another example note."
+    }
+  ]
+}
