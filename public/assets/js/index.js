@@ -12,17 +12,17 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// Show an element
+// displays the the notes
 const show = (elem) => {
   elem.style.display = 'inline';
 };
 
-// Hide an element
+// Hide element until user wants to see it 
 const hide = (elem) => {
   elem.style.display = 'none';
 };
 
-// activeNote is used to keep track of the note in the textarea
+// Keep track of the note
 let activeNote = {};
 
 const getNotes = () =>
@@ -158,12 +158,12 @@ const renderNoteList = async (notes) => {
     noteListItems.push(createLi('No saved Notes', false));
   }
 
-  // jsonNotes.forEach((note) => {
-  //   const li = createLi(note.title);
-  //   li.dataset.note = JSON.stringify(note);
+  jsonNotes.forEach((note) => {
+    const li = createLi(note.title);
+    li.dataset.note = JSON.stringify(note);
 
-  //   noteListItems.push(li);
-  // });
+    noteListItems.push(li);
+  });
 
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
